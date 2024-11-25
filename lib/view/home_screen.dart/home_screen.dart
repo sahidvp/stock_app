@@ -51,10 +51,11 @@ class HomeScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(15)),
                 child: TextFormField(
                   decoration: InputDecoration(
+                      border: InputBorder.none,
                       suffixIcon: Icon(
-                    Icons.search,
-                    color: Colors.black,
-                  )),
+                        Icons.search,
+                        color: Colors.black,
+                      )),
                 )),
           ),
         ],
