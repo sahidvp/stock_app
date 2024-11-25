@@ -19,7 +19,8 @@ class SearchProvider extends ChangeNotifier {
       final results = await _searchService.fetchSearchResults(keywords);
       _searchResults = results.bestMatches;
     } catch (e) {
-      _searchResults = [];
+      print(e);
+      //_searchResults = [];
       rethrow;
     } finally {
       _isLoading = false;
