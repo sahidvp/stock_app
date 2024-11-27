@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:stock_app/utils/app_colors.dart';
+import 'package:stock_app/utils/app_text_styles.dart';
 import 'package:stock_app/view/home_screen.dart/widgets/expanded_content.dart';
 
 import '../../../model/search_results.dart';
 
 class ExpandableListItem extends StatefulWidget {
   final SearchResult result;
+  final bool isWatchList;
 
-  const ExpandableListItem({super.key, required this.result});
+  const ExpandableListItem(
+      {super.key, required this.result, required this.isWatchList});
 
   @override
   _ExpandableListItemState createState() => _ExpandableListItemState();
@@ -29,11 +32,8 @@ class _ExpandableListItemState extends State<ExpandableListItem> {
           children: [
             ListTile(
               title: Text(
-                widget.result.name, // Company name
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black,
-                ),
+                widget.result.name,
+                style: AppTextStyles.companyTitle,
               ),
               trailing: IconButton(
                 icon: Icon(
@@ -64,7 +64,8 @@ class _ExpandableListItemState extends State<ExpandableListItem> {
                     expandedContent("Currency", widget.result.currency,
                         Icons.monetization_on),
                     expandedContent("Match score",
-                        widget.result.matchScore.toString(), Icons.star)
+                        widget.result.matchScore.toString(), Icons.star),
+                    addButton()
                   ],
                 ),
               ),
@@ -74,5 +75,14 @@ class _ExpandableListItemState extends State<ExpandableListItem> {
     );
   }
 
-  
+  Align addButton() {
+    return Align(
+        alignment: Alignment.topRight,
+        child: IconButton(
+            onPressed: () {},
+            icon: const Icon(
+              Icons.add_box,
+              color: AppColors.backgroundColor,
+            )));
+  }
 }

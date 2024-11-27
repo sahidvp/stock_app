@@ -22,7 +22,7 @@ AppBar appBar(String title) {
             offset: const Offset(0, 3),
           ),
         ],
-        border: Border(
+        border: const Border(
           bottom: BorderSide(
             color: AppColors.foregroundColor,
             width: 0.5,
