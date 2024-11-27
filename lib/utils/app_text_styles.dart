@@ -11,5 +11,5 @@ class AppTextStyles {
       fontWeight: FontWeight.w700,
       fontSize: 13);
   static const TextStyle companyTitle =
-      TextStyle(fontWeight: FontWeight.bold, color: Colors.black, fontSize: 15);
+      TextStyle(fontWeight: FontWeight.bold, color: Colors.black, fontSize: 12);
 }

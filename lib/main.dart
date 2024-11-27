@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:stock_app/controller/bottomNav_provider.dart';
+import 'package:stock_app/controller/expanded_items_provider.dart';
 import 'package:stock_app/controller/search_provider.dart';
 import 'package:stock_app/utils/app_theme.dart';
 import 'package:stock_app/view/bottom_navbar/bottom_navbar.dart';
@@ -12,6 +13,7 @@ void main() {
     providers: [
       ChangeNotifierProvider(create: (_) => SearchProvider()),
       ChangeNotifierProvider(create: (_) => BottomnavProvider()),
+      ChangeNotifierProvider(create: (_) => ExpandableItemProvider()),
     ],
     child: const MyApp(),
   ));

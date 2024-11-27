@@ -37,7 +37,7 @@ class HomeScreen extends StatelessWidget {
                 itemCount: searchProvider.searchResults.length,
                 itemBuilder: (context, index) {
                   final result = searchProvider.searchResults[index];
-                  return ExpandableListItem(result: result,isWatchList: false,);
+                  return ExpandableListItem(result: result,);
                 },
               ),
             ),
