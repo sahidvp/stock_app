@@ -8,7 +8,7 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     // Start the timer and navigate after 3 seconds
     Future.delayed(const Duration(seconds: 5), () {
-      Navigator.pushNamed(context, "/home");
+      Navigator.pushNamed(context, "/bottomnav");
     });
 
     return Scaffold(

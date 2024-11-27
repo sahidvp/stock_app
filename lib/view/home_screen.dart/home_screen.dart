@@ -29,7 +29,10 @@ class HomeScreen extends StatelessWidget {
           else if (searchProvider.searchResults.isEmpty)
             Expanded(
               child: Center(
-                  child: Lottie.asset("assets/animations/Animation 2.json")),
+                  child: SizedBox(
+                      width: 260,
+                      child:
+                          Lottie.asset("assets/animations/Animation 2.json"))),
             )
           else
             Expanded(
@@ -37,7 +40,10 @@ class HomeScreen extends StatelessWidget {
                 itemCount: searchProvider.searchResults.length,
                 itemBuilder: (context, index) {
                   final result = searchProvider.searchResults[index];
-                  return ExpandableListItem(result: result,);
+                  return ExpandableListItem(
+                    result: result,
+                    isHomeScreen: true,
+                  );
                 },
               ),
             ),

@@ -31,7 +31,7 @@ class SearchProvider extends ChangeNotifier {
     notifyListeners();
 
     try {
-      if (keywords == "") print("nothibng..");
+      
       final results = await _searchService.fetchSearchResults(keywords);
       _searchResults = results.bestMatches;
     } catch (e) {
